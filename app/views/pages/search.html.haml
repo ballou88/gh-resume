@@ -7,15 +7,12 @@
     =render partial: "repo", collection: @repos
     .email-me
       %p Would you like a copy emailed to you?
-      =form_tag "mail", method: 'post', class: "form-horizontal" do |f|
+      =form_tag "mail", method: 'post', class: "email" do |f|
         = hidden_field_tag :username, params[:search]
-        .control-group
-          = label_tag "email", "Email", class: 'control-label'
-          .controls
-            = email_field_tag "email", "", placeholder: "Email Address"
-        .control-group
-          .controls
-            %label.checkbox{for: "notify"}
-              = check_box_tag "notify", "yes", false
-              Notify me of any Repositories Added
-            = button_tag "Email Me A Copy", class: "btn"
+        = email_field_tag "email", "", placeholder: "Email Address"
+        %br
+        %label.checkbox{for: "notify"}
+          = check_box_tag "notify", "yes", false
+          Email me if any #{@user.login} adds any Repos
+        %br
+        = button_tag "Email Me A Copy", class: "btn btn-primary"
