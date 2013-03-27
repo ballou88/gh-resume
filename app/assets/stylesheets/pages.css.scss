@@ -19,6 +19,13 @@ header{
   height: 30px;
   background: $header-color;
 }
+.title{
+  float: left;
+  font-size: 30px;
+  color: white;
+  text-transform: uppercase;
+  line-height: 30px
+}
 form.form-search{
   float: right;
 }
