@@ -1,7 +1,8 @@
-=@user.name
-=@user.login
-=@user.email
-=@user.blog
+Name:     #{@user.name}
+Login:    #{@user.login}
+Email:    #{@user.email}
+Website:  #{@user.blog}
 
+="###################################################"
 -@repos.each do |repo|
   #{repo.name}(#{repo.html_url})

@@ -4,6 +4,6 @@ class ResumeMailer < ActionMailer::Base
   def resume_email(user_email, user_name)
     @user = Github.user_information(user_name)
     @repos = Github.user_repos(user_name)
-    mail(:to => user_email, :subject => "Github Resume")
+    mail(:to => user_email, :subject => "Github Resume for #{user_name}")
   end
 end
