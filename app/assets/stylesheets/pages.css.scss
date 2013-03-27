@@ -1,0 +1,82 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+$header-color: #262729;
+$body-color: lighten($header-color, 60%);
+
+body{
+  background: $body-color image-url("bg.png");
+  font-family: "KarlaRegular", Arial, sans-serif;
+}
+.container{
+  width: 720px;
+  margin: 0 auto;
+}
+header{
+  padding: 20px 0;
+  height: 30px;
+  background: $header-color;
+}
+form.form-search{
+  float: right;
+}
+form.form-inline{
+  width: 390px;
+  margin: 40px auto;
+}
+.results{
+  background: white;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0px 0px 10px 0 #000;;
+  padding: 40px 20px;
+}
+.repo{
+  clear: both;
+  position: relative;
+  height: 60px;
+  border-bottom: 1px solid #EEE;
+  padding: 10px 20px;
+  &:nth-child(odd){
+    background: #f1f1f1;
+  }
+}
+.group:before,.group:after{
+  content:"";
+  display:table;
+}
+.group:after{
+  clear:both;
+}
+.owner{
+  position: relative;
+  .avatar{
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 80px;
+    height: 80px;
+  }
+  .name{
+    float: left;
+    height: 80px;
+  }
+  .info{
+    float: right;
+    height: 80px;
+  }
+}
+.username{
+  font-size: 30px;
+  font-family: "KarlaBold", Arial, sans-serif;
+}
+
+.repo-name{
+  font-size: 30px;
+}
+.forks, .watchers, .language{
+  float: right;
+  margin-right: 10px;
+  clear: right;
+}

@@ -1,0 +1,9 @@
+.owner.group
+  .avatar
+    =image_tag user.avatar_url
+  .name
+    %p.username=user.name
+    %p.login=user.login
+  .info
+    %p Email: #{mail_to(user.email)}
+    %p Homepage: #{link_to user.blog, target: "_blank"}

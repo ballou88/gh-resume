@@ -65,6 +65,7 @@ group :development do
   gem "rails-footnotes"
   gem "better_errors"
   gem "binding_of_caller"
+  gem 'quiet_assets'
 end
 
 group :assets do
@@ -76,3 +77,4 @@ gem "haml"
 gem "haml-rails"
 gem "simple_form"
 gem "pg"
+gem 'octokit'

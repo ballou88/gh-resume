@@ -1,0 +1,10 @@
+.container.results
+  -if @repos.blank?
+    %p No Results
+  -else
+    =render partial: "owner", locals: {user: @user}
+    %hr
+    =render partial: "repo", collection: @repos
+    =form_tag "mail", method: 'post', class: "form-inline" do |f|
+      = text_field_tag :search, "", placeholder: "Email Address"
+      = button_tag "Email Me A Copy", class: "btn"
