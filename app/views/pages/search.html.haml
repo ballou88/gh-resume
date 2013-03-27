@@ -6,5 +6,6 @@
     %hr
     =render partial: "repo", collection: @repos
     =form_tag "mail", method: 'post', class: "form-inline" do |f|
-      = text_field_tag :search, "", placeholder: "Email Address"
+      = hidden_field_tag :username, params[:search]
+      = email_field :email, "", placeholder: "Email Address"
       = button_tag "Email Me A Copy", class: "btn"
