@@ -2,7 +2,7 @@
   =link_to repo.name, repo.html_url, "data-type" => repo_type(repo), target: "_blank", class: "repo-name"
   .language=repo.language
   .forks Forks: #{repo.forks_count}
-  .watchers Watchers: #{repo.watchers_count}
+  .watchers Stars: #{repo.watchers_count}
   .created Created #{time_ago_in_words(repo.created_at)}
   .update Last updated #{time_ago_in_words(repo.updated_at)}
 
