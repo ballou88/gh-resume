@@ -9,12 +9,12 @@ gem "pg"
 gem 'octokit'
 gem 'delayed_job_active_record'
 gem 'jquery-rails'
+gem "bootstrap-sass"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
-  gem "bootstrap-sass"
 end
 
 group :development, :test do
