@@ -13,6 +13,6 @@
         %br
         %label.checkbox{for: "notify"}
           = check_box_tag "notify", "yes", false
-          Email me if any #{@user.login} adds any Repos
+          Email me if #{@user.login} adds a new Repo
         %br
         = button_tag "Email Me A Copy", class: "btn btn-primary"
