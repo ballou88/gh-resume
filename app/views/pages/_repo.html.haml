@@ -1,5 +1,5 @@
 .repo.group
-  =link_to repo.name, repo.html_url, "data-type" => repo_type(repo), target: "_blank", class: "repo-name"
+  =link_to repo.name, repo.html_url, target: "_blank", class: "repo-name"
   .language=repo.language
   .forks Forks: #{repo.forks_count}
   .watchers Stars: #{repo.watchers_count}
