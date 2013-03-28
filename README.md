@@ -20,6 +20,7 @@ To run on heroku run:
 
     heroku create
     git push heroku master
+    heroku run rake db:migrate
     heroku config:add SENDGRID_USERNAME=username SENDGRID_PASSWORD=password GH_LOGIN=github_login GH_PASSWORD=github_password
 
 This will run the primary app, but the mailer is handled by delayed job which requires running a rake task.
