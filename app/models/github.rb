@@ -1,8 +1,8 @@
 class Github
-  def self.user_repos(user_name)
+  def self.user_repos(user_name, options={})
     return [] if user_name.blank?
     begin
-      Octokit.repositories(user_name)
+      Octokit.repositories(user_name, options)
     rescue
       []
     end
