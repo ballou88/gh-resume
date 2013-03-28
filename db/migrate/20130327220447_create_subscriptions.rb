@@ -3,6 +3,7 @@ class CreateSubscriptions < ActiveRecord::Migration
     create_table :subscriptions do |t|
       t.references :user
       t.references :listener
+      t.text :repo_ids
       t.timestamps
     end
   end

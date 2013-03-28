@@ -1,0 +1,11 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv"=>"Content-Type"}
+  %body
+    %h1 #{@user.name}
+    %p=link_to @user.login, @user.html_url
+    %p #{mail_to @user.email}
+    %p=link_to "Website", @user.blog
+    %h2 New Repo:
+    =link_to @repo.name, @repo.html_url

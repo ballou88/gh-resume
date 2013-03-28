@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20130327220447) do
   create_table "subscriptions", :force => true do |t|
     t.integer  "user_id"
     t.integer  "listener_id"
+    t.text     "repo_ids"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
