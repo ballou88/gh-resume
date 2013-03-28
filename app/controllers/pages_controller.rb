@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
   def mail
     ResumeMailer.delay.resume_email(params[:email].first, params[:username])
+    ListenerCreator.new(params[:email]).listen_to(params[:username]) if params[:notify] == "yes"
     redirect_to root_path, notice: "Email Sent."
   end
 end
